@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import  { Engine } from './module'
 
 interface AppProps {}
 
 function App({}: AppProps) {
+  const engine = new Engine();
+  console.log(engine.something);
+
   // Create the count state.
   const [count, setCount] = useState(0);
   // Create the counter (+1 every second).
